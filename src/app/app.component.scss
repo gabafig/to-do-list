@@ -1,0 +1,23 @@
+.layout {
+    display: flex;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1;
+    padding: 10pt;
+}
+
+.header {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+    font-weight: bold;
+    font-size: 20pt ;
+}
+
+.footer {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+    font-weight: bold;
+    font-size: 20pt ;
+}

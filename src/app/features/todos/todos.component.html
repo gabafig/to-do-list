@@ -1,0 +1,22 @@
+<form (ngSubmit)="addTask()">
+  <input 
+    [(ngModel)]="newTitle"
+    name="title"
+    placeholder="Digite uma tarefa..." 
+  />
+  <button type="submit">Adicionar</button>
+  <button (click)="clearAll()" [disabled]="todos.length === 0">Limpar tudo</button>
+</form>
+
+
+<ul>
+    <li *ngFor="let task of todos; let i = index">
+      <label>
+      <input type="checkbox" [checked]="task.done" (change)="toggleDone(task.id)" />  
+      <span [class.done]="task.done">{{ task.title }}</span>
+      </label>
+      <button (click)="remove(i)">Excluir</button>
+    </li>
+</ul>
+
+<p>Pendentes: {{ countPending }} </p>
